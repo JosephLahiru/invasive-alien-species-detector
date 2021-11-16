@@ -16,7 +16,7 @@ def upload():
 
     cv2.imwrite("res/original/img2.jpg", img)
 
-    os.system("python ../yolov5/detect.py --weights ../best.pt --img 360 --conf 0.25 --source res/original/img2.jpg")
+    os.system("python ../yolov5/detect.py --weights ../best.pt --img 360 --conf 0.40 --source res/original/img2.jpg")
 
     species_type = select_web()
 
