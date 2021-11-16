@@ -106,6 +106,14 @@ def run(weights=ROOT / 'yolov5s.pt',  # model.pt path(s)
         pred = non_max_suppression(pred, conf_thres, iou_thres, classes, agnostic_nms, max_det=max_det)
         dt[2] += time_sync() - t3
 
+        try:
+            if(len(pred[0][0]) > 0):
+                print("[LOG] True")
+        except:
+            file = open('../flask_web/res/detected.txt', 'a')
+            file.write("None\n")
+            file.close()
+
         # Second-stage classifier (optional)
         # pred = utils.general.apply_classifier(pred, classifier_model, im, im0s)
 
@@ -147,7 +155,10 @@ def run(weights=ROOT / 'yolov5s.pt',  # model.pt path(s)
                         label = None if hide_labels else (names[c] if hide_conf else f'{names[c]} {conf:.2f}')
                         img = annotator.box_label(xyxy, label, color=colors(c, True))
 
-                        cv2.imwrite(f"../flask_web/res/processed/{names[c]}.jpg", img)
+                        #cv2.imwrite(f"../flask_web/res/processed/{names[c]}.jpg", img)
+                        file = open('../flask_web/res/detected.txt', 'a')
+                        file.write(f"{label}\n")
+                        file.close()
 
                         if save_crop:
                             save_one_box(xyxy, imc, file=save_dir / 'crops' / names[c] / f'{p.stem}.jpg', BGR=True)

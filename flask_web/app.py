@@ -1,5 +1,5 @@
 from flask import Flask, render_template, url_for, request
-from werkzeug.utils import secure_filename
+# from werkzeug.utils import secure_filename
 import cv2, numpy, os
 
 app = Flask(__name__)
@@ -18,9 +18,31 @@ def upload():
 
     os.system("python ../yolov5/detect.py --weights ../best.pt --img 360 --conf 0.25 --source res/original/img2.jpg")
 
-    return render_template('index.html')
+    species_type = select_web()
 
-    #filename = secure_filename(pic.filename)
+    if(species_type == "marble_catfish"):
+        return render_template('marble_catfish.html')
+    elif(species_type == "giant_african_snail"):
+        return render_template('giant_african_snail.html')
+    elif(species_type == "clown_knifefish"):
+        return render_template('clown_knifefish.html')
+    elif(species_type == "apple_snail"):
+        return render_template('apple_snail.html')
+    elif(species_type == "rainbow_trouty"):
+        return render_template('rainbow_trouty.html')
+    elif(species_type == "scavenger"):
+        return render_template('scavenger.html')
+    elif(species_type == "red_eared_slider"):
+        return render_template('red_eared_slider.html')
+    else:
+        return render_template('index.html')
+
+def select_web():
+    file = open('res/detected.txt', 'r')
+    data = file.read().splitlines()
+    file.close()
+
+    return data[len(data)-1].split(' ')[0]
 
 if(__name__=="__main__"):
-    app.run(debug=True)
+    app.run(debug=False)
