@@ -5,15 +5,9 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     </head>
     <body>
-        <!-- <h1 id="heading">Invasive alien species on land and water</h1>
-
-        <form action="http://localhost:5000/upload" enctype="multipart/form-data" method="POST">
-            <input type="file" name="pic"><br/>
-            <input type="submit" value="Upload the image to process">
-        </form> -->
-        <form enctype="multipart/form-data" method="POST">
-            <input type="submit" name="launch" value="Launch animal AI">
-            <input type="submit" name="launch" value="Launch Plant AI">
+        <form method="POST" action="http://localhost:5000/process_data" enctype="multipart/form-data">
+            <input type="submit" value="Launch Animal" name="launch_animal"/>
+            <input type="submit" value="Launch Plant" name="launch_plant" />
         </form>
 
     </body>

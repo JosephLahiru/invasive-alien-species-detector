@@ -4,17 +4,20 @@ import cv2, numpy, os, random
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route("/", methods=['GET', 'POST'])
 def index():
-    #return render_template('index.html')
-    if request.form.validate_on_submit:
-        if request.form['animals'] == 'Launch animal AI':
-            return render_template('process_animal.html')
-        elif request.form['plants'] == 'Launch plant AI':
+    return render_template('index.html')
+
+@app.route("/process_data", methods=['GET', 'POST'])
+def choose():
+    if request.method == 'POST':
+        if request.form.get('launch_plant') == 'Launch Plant':
+            return render_template('process_plant.html')
+        elif request.form.get('launch_animal') == 'Launch Animal':
             return render_template('process_animal.html')
 
 @app.route('/upload_ani', methods=['POST'])
-def upload():
+def upload_ani():
 
     #npimg = numpy.fromfile(request.files['pic'], numpy.uint8)
     #img = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
@@ -42,8 +45,8 @@ def upload():
     else:
         return render_template('index.html')
 
-@app.route('/upload_plat', methods=['POST'])
-def upload():
+@app.route('/upload_plant', methods=['POST'])
+def upload_plant():
 
     #npimg = numpy.fromfile(request.files['pic'], numpy.uint8)
     #img = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
