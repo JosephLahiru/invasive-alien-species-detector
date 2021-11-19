@@ -6,9 +6,43 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    #return render_template('index.html')
+    if request.form.validate_on_submit:
+        if request.form['animals'] == 'Launch animal AI':
+            return render_template('process_animal.html')
+        elif request.form['plants'] == 'Launch plant AI':
+            return render_template('process_animal.html')
 
-@app.route('/upload', methods=['POST'])
+@app.route('/upload_ani', methods=['POST'])
+def upload():
+
+    #npimg = numpy.fromfile(request.files['pic'], numpy.uint8)
+    #img = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
+
+    #cv2.imwrite("res/original/img2.jpg", img)
+
+    #os.system("python ../yolov5/detect.py --weights ../best.pt --img 360 --conf 0.40 --source res/original/img2.jpg")
+
+    species_type = select_web()
+
+    if(species_type == "marble_catfish"):
+        return render_template('marble_catfish.html')
+    elif(species_type == "giant_african_snail"):
+        return render_template('giant_african_snail.html')
+    elif(species_type == "clown_knifefish"):
+        return render_template('clown_knifefish.html')
+    elif(species_type == "apple_snail"):
+        return render_template('apple_snail.html')
+    elif(species_type == "rainbow_trouty"):
+        return render_template('rainbow_trouty.html')
+    elif(species_type == "scavenger"):
+        return render_template('scavenger.html')
+    elif(species_type == "red_eared_slider"):
+        return render_template('red_eared_slider.html')
+    else:
+        return render_template('index.html')
+
+@app.route('/upload_plat', methods=['POST'])
 def upload():
 
     #npimg = numpy.fromfile(request.files['pic'], numpy.uint8)
@@ -48,4 +82,4 @@ def select_web():
     return types[random.randint(0, 8)]
 
 if(__name__=="__main__"):
-    app.run(debug=False)
+    app.run(debug=True)
