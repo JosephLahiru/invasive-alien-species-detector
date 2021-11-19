@@ -1,0 +1,60 @@
+marble_catfish 0.45
+marble_catfish 0.45
+giant_african_snail 0.83
+marble_catfish 0.45
+giant_african_snail 0.83
+giant_african_snail 0.83
+giant_african_snail 0.83
+giant_african_snail 0.83
+giant_african_snail 0.83
+marble_catfish 0.45
+clown_knifefish 0.66
+clown_knifefish 0.66
+clown_knifefish 0.66
+clown_knifefish 0.66
+clown_knifefish 0.66
+giant_african_snail 0.83
+red_eared_slider 0.80
+scavenger 0.59
+apple_snail 0.63
+apple_snail 0.75
+apple_snail 0.75
+rainbow_trouty 0.48
+red_eared_slider 0.80
+red_eared_slider 0.80
+red_eared_slider 0.80
+apple_snail 0.75
+red_eared_slider 0.80
+red_eared_slider 0.80
+None
+apple_snail 0.38
+scavenger 0.59
+None
+None
+None
+None
+None
+marble_catfish 0.45
+None
+None
+None
+None
+clown_knifefish 0.27
+marble_catfish 0.32
+rainbow_trouty 0.48
+None
+rainbow_trouty 0.48
+clown_knifefish 0.66
+apple_snail 0.38
+None
+giant_african_snail 0.66
+None
+red_eared_slider 0.80
+apple_snail 0.75
+red_eared_slider 0.80
+marble_catfish 0.45
+red_eared_slider 0.52
+red_eared_slider 0.45
+red_eared_slider 0.65
+red_eared_slider 0.78
+giant_african_snail 0.83
