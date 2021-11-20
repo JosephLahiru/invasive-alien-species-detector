@@ -3,8 +3,30 @@
     <head>
         <title>Index</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     </head>
     <body>
+        
+        <!--Header Start-->
+        <header>
+            <div id="menu-bar" class="fas fa-bars"></div>
+
+            <a href="#" class="logo"><span>H</span>ackai</a>
+
+            <nav class="navbar">
+                <a href="">home</a>
+                <a href="">about us</a>
+                <a href="">contact us</a>
+            </nav>
+
+        </header>
+
+
+        <!--Header End-->
+
         <form method="POST" action="http://localhost:5000/process_data" enctype="multipart/form-data">
             <input type="submit" value="Launch Animal" name="launch_animal"/>
             <input type="submit" value="Launch Plant" name="launch_plant" />
