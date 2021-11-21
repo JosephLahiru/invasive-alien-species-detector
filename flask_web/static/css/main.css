@@ -191,6 +191,54 @@ header .search-bar-container label:hover{
     padding:1rem 0;
   }
   
+/** News Feed CSS**/
+.newsfeed{
+    padding-bottom: 2rem;
+    max-width: 1150px;
+    display: flex;
+}
+
+.newsfeed .card{
+    background: rgb(255, 255, 255);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+    flex: 1;
+    margin: 0 10px;
+}
+
+.newsfeed .card .img{
+    height: 200px;
+    width: 100%;
+}
+
+.newsfeed .card .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.newsfeed .card .content .title{
+    font-size: 25px;
+    font-weight: 600;
+    padding:1rem 2rem 2rem 0;
+}
+
+.newsfeed .card .content{
+    padding: 10px 15px;
+    font-size: 15px;
+    padding-bottom: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
  /** Footer CSS**/ 
 .footer{
