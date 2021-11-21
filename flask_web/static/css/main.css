@@ -192,43 +192,38 @@ header .search-bar-container label:hover{
   }
   
 /** News Feed CSS**/
-.newsfeed{
-    padding-bottom: 2rem;
-    max-width: 1150px;
-    display: flex;
+.newsfeed .news-slider{
+   padding-bottom: 2rem;
 }
 
-.newsfeed .card{
-    background: rgb(255, 255, 255);
+.newsslide{
+    padding: 1rem;;
+}
+
+.newsfeed .box{
+    padding: 2rem;
+    text-align: center;
     box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
-    flex: 1;
-    margin: 0 10px;
+    border-radius: .5rem;
 }
 
-.newsfeed .card .img{
-    height: 200px;
-    width: 100%;
-}
-
-.newsfeed .card .img img{
-    height: 100%;
-    width: 100%;
+.newsfeed .box img{
+    height: 18rem;
+    width: 25rem;
     object-fit: cover;
+    margin-bottom: 1rem;
 }
 
-.newsfeed .card .content .title{
-    font-size: 25px;
-    font-weight: 600;
-    padding:1rem 2rem 2rem 0;
+.newsfeed .box h3{
+    color: #333;
+    font-size: 2.5rem;
 }
 
-.newsfeed .card .content{
-    padding: 10px 15px;
-    font-size: 15px;
-    padding-bottom: 2rem;
+.newsfeed .box p{
+    color: #666;
+    font-size: 1.5rem;
+    padding: 1rem 0;
 }
-
-
 
 
 
