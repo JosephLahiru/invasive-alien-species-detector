@@ -1,36 +1,103 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Index</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>complete responsive tour and travel agency website design tutorial</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    </head>
-    <body>
-        
-        <!--Header Start-->
-        <header>
-            <div id="menu-bar" class="fas fa-bars"></div>
-
-            <a href="#" class="logo"><span>H</span>ackai</a>
-
-            <nav class="navbar">
-                <a href="">home</a>
-                <a href="">about us</a>
-                <a href="">contact us</a>
-            </nav>
-
-        </header>
 
 
-        <!--Header End-->
+</head>
+<body>
+    
+<!-- header section starts  -->
 
-        <form method="POST" action="http://localhost:5000/process_data" enctype="multipart/form-data">
-            <input type="submit" value="Launch Animal" name="launch_animal"/>
-            <input type="submit" value="Launch Plant" name="launch_plant" />
-        </form>
+<header>
 
-    </body>
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <a href="#" class="logo"><span>h</span>ackai</a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#book">about</a>
+        <a href="#contact">contact</a>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<!--Main button section-->
+
+<section class="btngroup" id="btngroup">
+
+    <div class="box-container">
+
+        <div class="box">
+            <form method="POST" action="http://localhost:5000/process_data" enctype="multipart/form-data">
+                <input type="submit" class="btn" value="Launch Animal" name="launch_animal"/>
+                <input type="submit" class="btn" value="Launch Plant" name="launch_plant" />
+            </form>
+        </div>
+    </div>
+
+</section>
+
+<!--Main button section ends-->
+
+
+
+
+<!-- footer section  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>about us</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quas magni pariatur est accusantium voluptas enim nemo facilis sit debitis.</p>
+        </div>
+        <div class="box">
+            <h3>services</h3>
+            <a href="#">test</a>
+            <a href="#">test</a>
+            <a href="#">test</a>
+            <a href="#">test</a>
+        </div>
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#home">home</a>
+            <a href="#book">about</a>
+            <a href="#contact">contact</a>
+        </div>
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+            <a href="#">twitter</a>
+            <a href="#">linkedin</a>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- javascript file link  -->
+<script src="js/script.js"></script>
+
+</body>
 </html>
