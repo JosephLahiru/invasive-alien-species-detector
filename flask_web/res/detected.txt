@@ -58,3 +58,12 @@ red_eared_slider 0.45
 red_eared_slider 0.65
 red_eared_slider 0.78
 giant_african_snail 0.83
+apple_snail 0.58
+apple_snail 0.58
+apple_snail 0.58
+apple_snail 0.58
+marble_catfish 0.75
+marble_catfish 0.75
+red_eared_slider 0.45
+red_eared_slider 0.52
+tortoise 0.62
