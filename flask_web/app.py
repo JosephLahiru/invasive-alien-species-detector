@@ -26,7 +26,7 @@ def upload_ani():
 
     #os.system("python ../yolov5/detect.py --weights ../best.pt --img 360 --conf 0.40 --source res/original/img2.jpg")
 
-    species_type = select_web()
+    species_type = select_web("animal")
 
     if(species_type == "marble_catfish"):
         return render_template('animals/marble_catfish.html')
@@ -55,7 +55,7 @@ def upload_plant():
 
     #os.system("python ../yolov5/detect.py --weights ../best.pt --img 360 --conf 0.40 --source res/original/img2.jpg")
 
-    species_type = select_web()
+    species_type = select_web("plant")
 
     if(species_type == "lantana"):
         return render_template('plants/lantana.html')
@@ -94,9 +94,16 @@ def upload_plant():
     else:
         return render_template('index.html')
 
-def select_web():
-    types = ["marble_catfish", "giant_african_snail", "clown_knifefish", "apple_snail",
-    "rainbow_trouty", "scavenger", "red_eared_slider"]
+def select_web(type):
+    if(type == "animal"):
+        types = ["marble_catfish", "giant_african_snail", "clown_knifefish", "apple_snail",
+        "rainbow_trouty", "scavenger", "red_eared_slider"]
+    else:
+        types = ["lantana","sphagneticola_trilobata","clusia_rosea","opuntia_dillenii","mimosa_pigra",
+        "parthenium_hysterophorus","clidemia_hirta","leucaena_leucocephala","alstonia_macrophylla",
+        "cuscuta_campestris_yunck","dillenia_suffruticosa","austroeupatorium_inulifolium","annona_glabra",
+        "eichhornia_crassipes","panicum_maximum","salvinia_molesta","prosopis_juliflora"]
+        
     # file = open('res/detected.txt', 'r')
     # data = file.read().splitlines()
     # file.close()
