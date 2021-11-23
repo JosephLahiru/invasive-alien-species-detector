@@ -5,3 +5,5 @@ marble_catfish
 rainbow_trouty
 red_eared_slider
 scavenger
+oscar
+tortoise
