@@ -26,7 +26,8 @@ def upload_ani():
 
     os.system("python ../yolov5/detect.py --weights ../models/best_new.pt --img 360 --conf 0.40 --source res/original/img2.jpg")
 
-    species_type = select_web("animal")
+    # species_type = select_web("animal")
+    species_type = select_web()
 
     if(species_type == "marble_catfish"):
         return render_template('animals/marble_catfish.html')
@@ -55,7 +56,8 @@ def upload_plant():
 
     os.system("python ../yolov5/detect.py --weights ../models/best_new.pt --img 360 --conf 0.40 --source res/original/img2.jpg")
 
-    species_type = select_web("plant")
+    # species_type = select_web("plant")
+    species_type = select_web()
 
     if(species_type == "lantana"):
         return render_template('plants/lantana.html')
