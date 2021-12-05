@@ -1,5 +1,11 @@
+!unzip -q /content/drive/MyDrive/train_data_2.zip -d ../
+
+
 train: train_data/images
 val: train_data/images
 
 nc: 9
 names: ['apple_snail','clown_knifefish','giant_african_snail','marble_catfish','rainbow_trouty','red_eared_slider','scavenger','oscar','tortoise']
+
+
+!zip -r /content/drive/MyDrive/exp2.zip /content/yolov5/runs/train/exp2
