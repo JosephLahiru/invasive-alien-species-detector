@@ -19,12 +19,12 @@ def choose():
 @app.route('/upload_ani', methods=['POST'])
 def upload_ani():
 
-    #npimg = numpy.fromfile(request.files['pic'], numpy.uint8)
-    #img = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
+    npimg = numpy.fromfile(request.files['pic'], numpy.uint8)
+    img = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
 
-    #cv2.imwrite("res/original/img2.jpg", img)
+    cv2.imwrite("res/original/img2.jpg", img)
 
-    #os.system("python ../yolov5/detect.py --weights ../best.pt --img 360 --conf 0.40 --source res/original/img2.jpg")
+    os.system("python ../yolov5/detect.py --weights ../models/best_new.pt --img 360 --conf 0.40 --source res/original/img2.jpg")
 
     species_type = select_web("animal")
 
@@ -48,12 +48,12 @@ def upload_ani():
 @app.route('/upload_plant', methods=['POST'])
 def upload_plant():
 
-    #npimg = numpy.fromfile(request.files['pic'], numpy.uint8)
-    #img = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
+    npimg = numpy.fromfile(request.files['pic'], numpy.uint8)
+    img = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
 
-    #cv2.imwrite("res/original/img2.jpg", img)
+    cv2.imwrite("res/original/img2.jpg", img)
 
-    #os.system("python ../yolov5/detect.py --weights ../best.pt --img 360 --conf 0.40 --source res/original/img2.jpg")
+    os.system("python ../yolov5/detect.py --weights ../models/best_new.pt --img 360 --conf 0.40 --source res/original/img2.jpg")
 
     species_type = select_web("plant")
 
@@ -94,22 +94,31 @@ def upload_plant():
     else:
         return render_template('index.html')
 
-def select_web(type):
-    if(type == "animal"):
-        types = ["marble_catfish", "giant_african_snail", "clown_knifefish", "apple_snail",
-        "rainbow_trouty", "scavenger", "red_eared_slider"]
-    else:
-        types = ["lantana","sphagneticola_trilobata","clusia_rosea","opuntia_dillenii","mimosa_pigra",
-        "parthenium_hysterophorus","clidemia_hirta","leucaena_leucocephala","alstonia_macrophylla",
-        "cuscuta_campestris_yunck","dillenia_suffruticosa","austroeupatorium_inulifolium","annona_glabra",
-        "eichhornia_crassipes","panicum_maximum","salvinia_molesta","prosopis_juliflora"]
+# <<<<<<< HEAD
+# def select_web(type):
+#     if(type == "animal"):
+#         types = ["marble_catfish", "giant_african_snail", "clown_knifefish", "apple_snail",
+#         "rainbow_trouty", "scavenger", "red_eared_slider"]
+#     else:
+#         types = ["lantana","sphagneticola_trilobata","clusia_rosea","opuntia_dillenii","mimosa_pigra",
+#         "parthenium_hysterophorus","clidemia_hirta","leucaena_leucocephala","alstonia_macrophylla",
+#         "cuscuta_campestris_yunck","dillenia_suffruticosa","austroeupatorium_inulifolium","annona_glabra",
+#         "eichhornia_crassipes","panicum_maximum","salvinia_molesta","prosopis_juliflora"]
         
-    # file = open('res/detected.txt', 'r')
-    # data = file.read().splitlines()
-    # file.close()
+#     # file = open('res/detected.txt', 'r')
+#     # data = file.read().splitlines()
+#     # file.close()
+# =======
+def select_web():
+    # types = ["marble_catfish", "giant_african_snail", "clown_knifefish", "apple_snail",
+    # "rainbow_trouty", "scavenger", "red_eared_slider"]
+    file = open('res/detected.txt', 'r')
+    data = file.read().splitlines()
+    file.close()
+# >>>>>>> AI_test_branch
 
-    #return data[len(data)-1].split(' ')[0]
-    return types[random.randint(0, 8)]
+    return data[len(data)-1].split(' ')[0]
+    #return types[random.randint(0, 8)]
 
 if(__name__=="__main__"):
-    app.run(debug=True)
+    app.run(debug=False)
