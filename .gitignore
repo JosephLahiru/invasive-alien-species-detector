@@ -1,3 +1,4 @@
 
 *.pt
 yolov5/runs
+.DS_Store
