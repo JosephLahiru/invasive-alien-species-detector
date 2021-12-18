@@ -29,6 +29,8 @@ def upload_ani():
     # species_type = select_web("animal")
     species_type = select_web()
 
+    print(f"Found a {species_type}")
+
     if(species_type == "marble_catfish"):
         return render_template('animals/marbel_catfish.html')
     elif(species_type == "giant_african_snail"):
