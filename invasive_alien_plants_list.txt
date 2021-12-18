@@ -5,6 +5,7 @@ opuntia_dillenii
 mimosa_pigra
 parthenium_hysterophorus
 clidemia_hirta
+leucaena_leucocephala
 alstonia_macrophylla
 cuscuta_campestris_yunck
 dillenia_suffruticosa
