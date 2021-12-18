@@ -29,8 +29,10 @@ def upload_ani():
     # species_type = select_web("animal")
     species_type = select_web()
 
+    print(f"Found a {species_type}")
+
     if(species_type == "marble_catfish"):
-        return render_template('animals/marble_catfish.html')
+        return render_template('animals/marbel_catfish.html')
     elif(species_type == "giant_african_snail"):
         return render_template('animals/giant_african_snail.html')
     elif(species_type == "clown_knifefish"):
@@ -38,9 +40,9 @@ def upload_ani():
     elif(species_type == "apple_snail"):
         return render_template('animals/apple_snail.html')
     elif(species_type == "rainbow_trouty"):
-        return render_template('animals/rainbow_trouty.html')
+        return render_template('animals/rainbow_trout.html')
     elif(species_type == "scavenger"):
-        return render_template('scavenger.html')
+        return render_template('animals/scavenger.html')
     elif(species_type == "red_eared_slider"):
         return render_template('animals/red_eared_slider.html')
     else:
@@ -58,6 +60,8 @@ def upload_plant():
 
     # species_type = select_web("plant")
     species_type = select_web()
+
+    print(f"Found a {species_type}")
 
     if(species_type == "lantana"):
         return render_template('plants/lantana.html')
@@ -112,9 +116,9 @@ def upload_plant():
 #     # file.close()
 # =======
 
-@app.route('/about_us', methods=['POST'])
-def about_us():
-    return render_template("about_us.html")
+# @app.route('/about_us', methods=['POST'])
+# def about_us():
+#     return render_template("about_us.html")
 
 def select_web():
     # types = ["marble_catfish", "giant_african_snail", "clown_knifefish", "apple_snail",
@@ -128,4 +132,4 @@ def select_web():
     #return types[random.randint(0, 8)]
 
 if(__name__=="__main__"):
-    app.run(debug=False)
+    app.run(debug=True)
