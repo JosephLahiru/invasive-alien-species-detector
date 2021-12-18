@@ -86,4 +86,5 @@ clown_knifefish 0.87
 clown_knifefish 0.87
 lantana 0.61
 lantana 0.70
-
+mimosa_pigra 0.45
+mimosa_pigra 0.50
