@@ -12,7 +12,7 @@ def index():
 def choose():
     if request.method == 'POST':
         if request.form.get('launch_plant') == 'Launch Plant':
-            return render_template('process_plant.html')
+            return render_template('plants.html')
         elif request.form.get('launch_animal') == 'Launch Animal':
             return render_template('process_animal.html')
 
