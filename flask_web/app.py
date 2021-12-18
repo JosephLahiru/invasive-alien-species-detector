@@ -111,6 +111,11 @@ def upload_plant():
 #     # data = file.read().splitlines()
 #     # file.close()
 # =======
+
+@app.route('/about_us', methods=['POST'])
+def about_us():
+    return render_template("about_us.html")
+
 def select_web():
     # types = ["marble_catfish", "giant_african_snail", "clown_knifefish", "apple_snail",
     # "rainbow_trouty", "scavenger", "red_eared_slider"]
