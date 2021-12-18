@@ -12,7 +12,7 @@ def index():
 def choose():
     if request.method == 'POST':
         if request.form.get('launch_plant') == 'Launch Plant':
-            return render_template('plants.html')
+            return render_template('process_plant.html')
         elif request.form.get('launch_animal') == 'Launch Animal':
             return render_template('process_animal.html')
 
@@ -30,7 +30,7 @@ def upload_ani():
     species_type = select_web()
 
     if(species_type == "marble_catfish"):
-        return render_template('animals/marble_catfish.html')
+        return render_template('animals/marbel_catfish.html')
     elif(species_type == "giant_african_snail"):
         return render_template('animals/giant_african_snail.html')
     elif(species_type == "clown_knifefish"):
@@ -38,9 +38,9 @@ def upload_ani():
     elif(species_type == "apple_snail"):
         return render_template('animals/apple_snail.html')
     elif(species_type == "rainbow_trouty"):
-        return render_template('animals/rainbow_trouty.html')
+        return render_template('animals/rainbow_trout.html')
     elif(species_type == "scavenger"):
-        return render_template('scavenger.html')
+        return render_template('animals/scavenger.html')
     elif(species_type == "red_eared_slider"):
         return render_template('animals/red_eared_slider.html')
     else:

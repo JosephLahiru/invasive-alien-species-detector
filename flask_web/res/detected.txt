@@ -68,3 +68,5 @@ red_eared_slider 0.45
 red_eared_slider 0.52
 tortoise 0.62
 marble_catfish 0.48
+lantana 0.61
+lantana 0.70
