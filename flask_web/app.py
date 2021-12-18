@@ -12,7 +12,7 @@ def index():
 def choose():
     if request.method == 'POST':
         if request.form.get('launch_plant') == 'Launch Plant':
-            return render_template('process_plant.html')
+            return render_template('plants.html')
         elif request.form.get('launch_animal') == 'Launch Animal':
             return render_template('process_animal.html')
 
@@ -58,6 +58,8 @@ def upload_plant():
 
     # species_type = select_web("plant")
     species_type = select_web()
+
+    print(f"Found a {species_type}")
 
     if(species_type == "lantana"):
         return render_template('plants/lantana.html')
@@ -112,9 +114,9 @@ def upload_plant():
 #     # file.close()
 # =======
 
-@app.route('/about_us', methods=['POST'])
-def about_us():
-    return render_template("about_us.html")
+# @app.route('/about_us', methods=['POST'])
+# def about_us():
+#     return render_template("about_us.html")
 
 def select_web():
     # types = ["marble_catfish", "giant_african_snail", "clown_knifefish", "apple_snail",
@@ -128,4 +130,4 @@ def select_web():
     #return types[random.randint(0, 8)]
 
 if(__name__=="__main__"):
-    app.run(debug=True)
+    app.run(debug=False)
