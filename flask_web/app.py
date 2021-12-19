@@ -12,7 +12,7 @@ def index():
 def choose():
     if request.method == 'POST':
         if request.form.get('launch_plant') == 'Launch Plant':
-            return render_template('plants.html')
+            return render_template('process_plant.html')
         elif request.form.get('launch_animal') == 'Launch Animal':
             return render_template('process_animal.html')
 
@@ -24,7 +24,7 @@ def upload_ani():
 
     cv2.imwrite("res/original/img2.jpg", img)
 
-    os.system("python3 ../yolov5/detect.py --weights ../models/plant_model.pt --img 360 --conf 0.40 --source res/original/img2.jpg")
+    os.system("python3 ../yolov5/detect.py --weights ../models/animal_model.pt --img 360 --conf 0.40 --source res/original/img2.jpg")
 
     # species_type = select_web("animal")
     species_type = select_web()

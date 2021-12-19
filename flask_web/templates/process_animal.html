@@ -1,17 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Process Animals</title>
-</head>
-<body>
-    <h1>Process Animals</h1>
-
-    <form action="http://localhost:5000/upload_ani" enctype="multipart/form-data" method="POST">
-        <input type="file" name="pic"><br/>
-        <input type="submit" value="Upload the image to process">
-    </form>
-</body>
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Greeno</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css2/bootstrap.min.css') }}">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css2/style.css') }}">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css2/responsive.css') }}">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css2/jquery.mCustomScrollbar.min.css') }}">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+   
+      <!-- plant -->
+      <div id="plant" class="plants">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 ">
+                  <div class="titlepage">
+                     <h2>Process Animals</h2>
+                     <span>Invasive Alien Species Detector</span>
+                  </div>
+               </div>
+               <div class="option">
+                  <form action="http://localhost:5000/upload_ani" enctype="multipart/form-data" method="POST">
+                     <input type="file" name="pic" id="file">
+                     <input type="submit" value="Upload the image to process" id="upload">
+                 </form>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                  <div class="plants-box">
+                     <figure><img src="static/images2/plant1.jpg" alt="img"/></figure>
+                     <h3> Floral Vibrant</h3>
+                     <p>It is a long established fact that a reader will be distracted by the readable content of a page   when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                  <div class="plants-box">
+                     <figure><img src="static/images2/plant2.jpg" alt="img"/></figure>
+                     <h3> Floral Vibrant</h3>
+                     <p>It is a long established fact that a reader will be distracted by the readable content of a page   when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                  <div class="plants-box">
+                     <figure><img src="static/images2/plant3.jpg" alt="img"/></figure>
+                     <h3> Floral Vibrant</h3>
+                     <p>It is a long established fact that a reader will be distracted by the readable content of a page   when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                  <div class="plants-box">
+                     <figure><img src="static/images2/plant1.jpg" alt="img"/></figure>
+                     <h3> Floral Vibrant</h3>
+                     <p>It is a long established fact that a reader will be distracted by the readable content of a page   when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                  <div class="plants-box">
+                     <figure><img src="static/images2/plant2.jpg" alt="img"/></figure>
+                     <h3> Floral Vibrant</h3>
+                     <p>It is a long established fact that a reader will be distracted by the readable content of a page   when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                  <div class="plants-box">
+                     <figure><img src="static/images2/plant3.jpg" alt="img"/></figure>
+                     <h3> Floral Vibrant</h3>
+                     <p>It is a long established fact that a reader will be distracted by the readable content of a page   when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end plant -->
+     
+      
+      
+      <!-- footer -->
+      <footer>
+         <div id="contact" class="footer">
+            <div class="copyright">
+               <div class="container">
+                  <p>Copyright 2019 All Rights Reserved Design By  <a href="https://html.design/">Free Html Templates</a></p>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+      <script>
+         $(document).ready(function(){
+         $(".fancybox").fancybox({
+         openEffect: "none",
+         closeEffect: "none"
+         });
+         
+         $(".zoom").hover(function(){
+         
+         $(this).addClass('transition');
+         }, function(){
+         
+         $(this).removeClass('transition');
+         });
+         });
+         
+      </script> 
+   </body>
 </html>

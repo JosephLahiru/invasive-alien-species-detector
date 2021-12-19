@@ -90,3 +90,5 @@ mimosa_pigra 0.45
 mimosa_pigra 0.50
 lantana 0.61
 lantana 0.70
+None
+clown_knifefish 0.87
