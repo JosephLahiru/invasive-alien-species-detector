@@ -5,3 +5,5 @@ yolov5/runs
 flask_web/res/original/img2.jpg
 flask_web/res/original/img2.jpg
 flask_web/res/original/img2.jpg
+flask_web/res/detected.txt
+flask_web/res/original/img2.jpg

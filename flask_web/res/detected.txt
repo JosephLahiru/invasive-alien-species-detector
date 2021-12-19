@@ -97,3 +97,11 @@ lantana 0.70
 clown_knifefish 0.87
 lantana 0.61
 lantana 0.70
+lantana 0.61
+lantana 0.70
+lantana 0.61
+lantana 0.70
+lantana 0.61
+lantana 0.70
+lantana 0.61
+lantana 0.70
