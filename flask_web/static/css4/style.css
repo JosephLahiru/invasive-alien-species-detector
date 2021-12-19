@@ -28,7 +28,7 @@ html{
 
 
 body{
-    background-image: url(static/img/bg.webp);
+    background-image: url("static/img/bg.webp");
     background:var(--bg-color-2);
 }
 
