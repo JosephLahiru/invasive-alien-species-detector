@@ -116,9 +116,9 @@ def upload_plant():
 #     # file.close()
 # =======
 
-# @app.route('/about_us', methods=['POST'])
-# def about_us():
-#     return render_template("about_us.html")
+@app.route('/debug', methods=['POST'])
+def debug():
+    return render_template("plants/lantana.html")
 
 def select_web():
     # types = ["marble_catfish", "giant_african_snail", "clown_knifefish", "apple_snail",
