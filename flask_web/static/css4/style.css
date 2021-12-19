@@ -28,8 +28,8 @@ html{
 
 
 body{
-    background-image: url("../img/bg.webp");
-    background:var(--bg-color-2);
+    background-image: url(../img/bg.webp);
+    /*background:var(--bg-color-2);*/
 }
 
 body.active{
