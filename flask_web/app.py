@@ -51,17 +51,19 @@ def upload_ani():
 @app.route('/upload_plant', methods=['POST'])
 def upload_plant():
 
-    npimg = numpy.fromfile(request.files['pic'], numpy.uint8)
-    img = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
+    # npimg = numpy.fromfile(request.files['pic'], numpy.uint8)
+    # img = cv2.imdecode(npimg, cv2.IMREAD_COLOR)
 
-    cv2.imwrite("res/original/img2.jpg", img)
+    # cv2.imwrite("res/original/img2.jpg", img)
 
-    os.system("python3 ../yolov5/detect.py --weights ../models/plant_model.pt --img 360 --conf 0.40 --source res/original/img2.jpg")
+    # os.system("python3 ../yolov5/detect.py --weights ../models/plant_model.pt --img 360 --conf 0.40 --source res/original/img2.jpg")
 
-    # species_type = select_web("plant")
-    species_type = select_web()
+    # # species_type = select_web("plant")
+    # species_type = select_web()
 
-    print(f"Found a {species_type}")
+    # print(f"Found a {species_type}")
+
+    species_type = "lantana"
 
     if(species_type == "lantana"):
         return render_template('plants/lantana.html')
@@ -116,9 +118,9 @@ def upload_plant():
 #     # file.close()
 # =======
 
-@app.route('/debug', methods=['POST'])
-def debug():
-    return render_template("plants/lantana.html")
+# @app.route('/path_', methods=['POST'])
+# def path_():
+#     return render_template("plants/lantana.html")
 
 def select_web():
     # types = ["marble_catfish", "giant_african_snail", "clown_knifefish", "apple_snail",
