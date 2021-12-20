@@ -208,10 +208,9 @@ header .search-bar-container label:hover{
 }
 
 .newsfeed .box img{
-    height: 18rem;
-    width: 25rem;
+    height: 22rem;
+    width: 32rem;
     object-fit: cover;
-    margin-bottom: 1rem;
 }
 
 .newsfeed .box h3{
