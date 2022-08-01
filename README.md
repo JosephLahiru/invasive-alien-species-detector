@@ -1,4 +1,6 @@
-# hack_ai
+#Invaside Alien Species Detector
+
+## hack_ai
 this rep includes the project made for the hack ai competition 2021
 
 ## Setting Up
